@@ -1,6 +1,9 @@
 MySQL Backup
 ============
 
+[![Build Status](https://travis-ci.org/ome/ansible-role-mysql-backup.svg)](https://travis-ci.org/ome/ansible-role-mysql-backup)
+[![Ansible Role](https://img.shields.io/ansible/role/41994.svg)](https://galaxy.ansible.com/ome/mysql_backup/)
+
 Setup a cron job for regular full Mysql/Mariadb database dumps.
 
 Assumes `root` has password-less access to all databases.
@@ -35,7 +38,7 @@ Example playbook
     # in daily backups on a rolling weekly cycle
     - hosts: mysql-servers
       roles:
-      - role: mysql-backup
+      - role: ome.mysql_backup
         mysql_backup_dir: /nfs/backups
         mysql_backup_filename_format: "{{ ansible_hostname }}-%a.mysqldump"
         mysql_backup_minimum_expected_size: 100000
