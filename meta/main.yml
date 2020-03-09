@@ -1,3 +1,4 @@
+---
 galaxy_info:
   author: ome-devel@lists.openmicroscopy.org.uk
   description: Setup a cron job for regular full Mysql/Mariadb database dumps
@@ -5,9 +6,9 @@ galaxy_info:
   license: BSD
   min_ansible_version: 2.1
   platforms:
-  - name: EL
-    versions:
-    - 7
+    - name: EL
+      versions:
+        - 7
   role_name: mysql_backup
   galaxy_tags: []
 
